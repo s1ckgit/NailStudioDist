@@ -10,4 +10,14 @@ window.addEventListener('DOMContentLoaded', () => {
     hamburgerClose.addEventListener('click', () => {
         hamburgerMenu.classList.remove('active')
     });
+
+    // Inactive links
+
+    const inactiveLinks = document.querySelectorAll('.price__item-link.inactive');
+    
+    inactiveLinks.forEach((item) => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+        })
+    })
 });
